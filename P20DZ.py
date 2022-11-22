@@ -16,6 +16,7 @@ print (pass_valid())
 print()
 print()
 print('Задание 2')
-s1='MMDCCLXXIX'
+s1='MMDCCLXXIXVI'
+s1='MDCCCLXXVI'
 r=r'^M{,3}D?C{,3}M?L?X{,3}C{,3}I{,3}X?V?I{,3}$'
 print("".join(re.findall(r,s1)))
