@@ -5,10 +5,10 @@ l = [-2, 3, 8, -11, -4, 6]
 def sum_minus(s):
     if len(s)==0:
         return 0
-    return sum_minus(s[1: ])+(s[0] if s[0] < 0 else 0)
+    return sum_minus(s[1: ])+(1 if s[0] < 0 else 0)
 
 
-print(sum_minus(l))
+print('n =',sum_minus(l))
 
 
 print("Задание 2")

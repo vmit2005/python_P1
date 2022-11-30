@@ -1,0 +1,3 @@
+text Cстрока1
+hello Cстрока2
+ghbdtn Cстрока3

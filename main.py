@@ -3137,13 +3137,142 @@ import re
 #         return union(s[0])+union(s[1:])
 #     return s[:1]+union(s[1:])
 # print ('Выпрямленный список',union(names))
+#
+# def remove(text):
+#     if not text:
+#         return ""
+#     if text[0] == "\t" or text[0] == " ":
+#         return remove(text[1:])
+#     else:
+#         return text[0] + remove(text[1:])
+#
+#
+# print(remove(" Hello\tWorld  "))
+#
+#
+#
+#Файлы
+#
+#
+# f=open('C:\\Users\\Дмитрий\\PycharmProjects\\P1\\text.txt',mode='r',encoding='utf8')
+# print(f)
+# print(*f)
+# f.close()
+# print(f.closed)
+# print(f.mode)
+# print(f.name)
+# print(f.encoding)
+#
+# f=open('C:\\Users\\Дмитрий\\PycharmProjects\\P1\\text.txt',mode='r',encoding='utf8')
+#
+# print(f.read(3))
+# print(f.read())
+# f.close()
+#
+# f=open('text.txt',mode='r',encoding='utf8')
+# try:
+#     print(f.read())
+# finally:
+#     f.close()
 
-def remove(text):
-    if not text:
-        return ""
-    if text[0]=="\t" or text[0]==" ":
-        return remove (text[1:])
-    else:
-        return text[0]+remove(text[1:])
+# f=open('text3.txt',mode='r',encoding='utf8')
+# # print(f.readline())
+# # print(f.readline(3))
+# # print(f.readline())
+# # print(f.readline())
+# print(f.readlines(20))
+# f.close()
 
-print (remove(" Hello\tWorld  "))
+# f=open('text3.txt',mode='r',encoding='utf8')
+# for line in f:
+#     print(line,end='\r')
+# f.close()
+# f=open('text3.txt',mode='r',encoding='utf8')
+# s=0
+# for line in f:
+#   s+=1
+# f.close()
+# print(s)
+# f=open('P24DZ.py',mode='r',encoding='utf8')
+# s=f.readlines()
+# f.close()
+# print(len(s))
+# f=open('xyz.txt','w',encoding='utf8')
+# f.write('Привет\nwopld')
+# f.write(str(5))
+# f.close()
+#
+# f=open('xyz.txt','a',)
+# print(f.write('\nПривет\nwopld'))
+# lines=['Линия 1','Линия2']
+# f.writelines(lines)
+# # f.write(str(5))
+# f.close()
+#
+# f=open('xyz1.txt','w')
+# lst=[str(i)+str(i-1)+'  ' for i in range(1,20)]
+#
+# # f.writelines(lst)
+# for i in lst:
+#     f.write(i+'\t')
+# f.close()
+# f=open('text2.txt','w')
+# f.write("Замена строки в текстовом файле\nИзменить строку в списке\npfgbcfnm cgbcjr d AFQK")
+# f.close()
+# f=open('text2.txt','r')
+# read_file=f.readlines()
+# print(read_file)
+# for i in range(len(read_file)):
+#     print (read_file[i])
+#     if read_file[i]=='Изменить строку в списке':
+#         read_file[i]="hello\n"
+# print(read_file)
+#
+# f.close()
+#
+# f=open('text2.txt','w')
+# f.writelines(read_file)
+# f.close()
+
+# f = open('text2.txt', 'w')
+# f.write("Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл")
+# f.close()
+#
+# n = int(input("Введите индекс: "))
+# f = open('text2.txt', 'r')
+# read_line = f.readlines()
+# f.close()
+# if len(read_line)<n:
+#     print('Такой строки нет')
+# else:
+#     read_line.pop(n)
+#
+# f = open('text2.txt', 'w')
+# f.writelines(read_line)
+# f.close()
+#
+# f=open('text.txt','r')
+# print(f.read(3))
+# print(f.tell())
+# print(f.seek((1)))
+# print(f.read(3))
+# print(f.tell())
+# f.close()
+#
+#
+f=open('text.txt','r+')
+print(f.write("I fr learning Python"))
+print(f.seek(3))
+print(f.write("--new string--"))
+print(f.tell())
+f.close()
+
+
+f.close()
+
+f=open('golden_star.png','rb')
+print(f.read())
+
+f.close()
+
+
