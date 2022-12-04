@@ -3260,19 +3260,24 @@ import re
 # f.close()
 #
 #
-f=open('text.txt','r+')
-print(f.write("I fr learning Python"))
-print(f.seek(3))
-print(f.write("--new string--"))
-print(f.tell())
-f.close()
+# f=open('text.txt','r+')
+# print(f.write("I fr learning Python"))
+# print(f.seek(3))
+# print(f.write("--new string--"))
+# print(f.tell())
+# f.close()
+#
+#
+# f.close()
+#
+# f=open('golden_star.png','rb')
+# print(f.read())
+#
+# f.close()
 
+a=int(input())
+b=int(input())
+print(f'{a}\\n+\\n{b}\\n=\\n{a+b}')
+from string import printable
 
-f.close()
-
-f=open('golden_star.png','rb')
-print(f.read())
-
-f.close()
-
-
+print(printable)
