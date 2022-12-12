@@ -2883,7 +2883,6 @@ l = 'Test string for me'
 # \A - ищет символы в начале строки
 import re
 
-
 #
 # s = "0 Я ищу 9 совпадения в 2023 году . И я их найду в 2 счёта.9578 19_5 4 4"
 # reg = r'\A\w\s\w+' #Буква  пробел буква
@@ -3151,7 +3150,7 @@ import re
 #
 #
 #
-#Файлы
+# Файлы
 #
 #
 # f=open('C:\\Users\\Дмитрий\\PycharmProjects\\P1\\text.txt',mode='r',encoding='utf8')
@@ -3275,9 +3274,151 @@ import re
 #
 # f.close()
 
-a=int(input())
-b=int(input())
-print(f'{a}\\n+\\n{b}\\n=\\n{a+b}')
-from string import printable
+# a=int(input())
+# b=int(input())
+# print(f'{a}\\n+\\n{b}\\n=\\n{a+b}')
+# from string import printable
+#
+# print(printable)
+#
+# with  open('text5.txt','w+') as f:
+#     print(f.write('0123456789'))
+#
+# with  open('text2.txt','r') as f:
+#     for line in f:
+#         print(line[:6])
+#
+#
+file_name = 'res.txt'
+# lst=(4.5,2.8,3.9,1.0,0.3,4.33,7.777)
+#
+# def get_line(lt):
+#     lt=list(map(str,lt))
+#     return ' '.join(lt)
+#
+#
+# with open(file_name,"w") as f:
+#     f.write(get_line(lst))
+# # print(get_line((lst)))
+# with open(file_name, 'r') as f:
+#     nums = f.read()
+#
+# print(nums)
+# lst =list( map(float, nums.split(' ')))
+# print(lst)
+# print(len(lst))
+# print(sum(lst))
 
-print(printable)
+# def longest_word(file):
+#     with open (file,"r",encoding='utf8') as text:
+#         w=text.read().split()
+#         max_lenght=len(max(w,key=len))
+#         res=[word for word in w if len(word)==max_lenght]
+#         if len(res)==1:
+#             return res[0]
+#         return res
+#
+#
+# file_name='res.txt'
+# print(longest_word(file_name))
+# text='Строка №1\nСтрока №2\nСтрока №3\nСтрока №4\nСтрока №5\nСтрока №6\nСтрока №7\nСтрока №8\nСтрока №9\nСтрока №10\n'
+# with open ('one.txt','w') as f:
+#     f.write(text)
+# read_file='one.txt'
+# write_file='two.txt'
+# with open(read_file,'r') as fr, open (write_file,'w') as fw:
+#     for line in fr:
+#         line=line.replace('Строка', 'Линия-')
+#         fw.write(line)
+#
+#
+#
+# Модуль OS и os.PATH
+#
+import os
+import os.path
+# print("Текущая директория", os.getcwd())
+# print(os.listdir('..'))
+# os.mkdir('folder1') #создает директорию
+# os.makedirs('nested1/nested2/nested4')
+# os.makedirs('E:/nested1/nested2/nested4')#Создает промежуточные и конечную директории пути, если они не существуют
+# если конечная директория сущестует будет ошибка
+# os.remove('xyz.txt')#Удаление файла
+# os.rename('nested1','test')
+# os.rename('text.txt','test/test1.txt')
+# os.renames('text.txt','test/test1.txt')
+# os.rmdir("folder1") Удаляет пустую папку
+# for root, dirs, files in os.walk('test',topdown=True):#Возвращает имена объекторв в виде дерева директорий
+#     # Lkz rf;ljq lbhtrnjhbb djpdhfoftn rjnht; (root- Путь к директори,dirs-  список директорий
+#     print("Root:",root)
+#     print("         Subdirs:", dirs)
+#     print("             files:", files)
+
+# def remov_empty_dirs(root_tree):
+#     for root, dirs, files in os.walk(root_tree):
+#         if not os.listdir(root):
+#             os.rmdir(root)
+#             print(f"Директория {root}удалена")
+# remov_empty_dirs('test')
+#
+#
+# print(os.path.split(r"C:\Users\Дмитрий\PycharmProjects\P1\test\test1.txt\\"))
+# print(os.path.dirname(r"C:\Users\Дмитрий\PycharmProjects\P1\test\test1.txt\\"))
+# print(os.path.basename(r"C:\Users\Дмитрий\PycharmProjects\P1\test\test1.txt\\"))
+# print(os.path.join(r'C:\Users\Дмитрий\PycharmProjects\P1','files','dir',"three.txt"))#Создает путь
+# dirs=['work/F1',"work/F2/F21"]
+# for d in dirs:
+#     os.makedirs(d)
+# files={'work':['w.text'],
+#        'work/F1':['f11.txt','f12.txt','f13.txt'],
+#        'work/F2/F21':['f211.txt','f212.txt']
+#        }
+#
+# for d, file in files.items():
+#     for f in file:
+#         file_path = os.path.join( d, f)
+#         print(file_path)
+#         open(file_path,'w').close()
+
+
+# file_text=['work/w.text','work/F1/F12.txt','work/F2/F21/F211.txt','work/F2/F21/f212.txt']
+# for file in file_text:
+#         with open(file,"w") as f:
+#             f.write(f"Text для файла по пути{file}.")
+# for root, dirs, files in os.walk('test',topdown=True):#Возвращает имена объекторв в виде дерева директорий
+#     # Lkz rf;ljq lbhtrnjhbb djpdhfoftn rjnht; (root- Путь к директори,dirs-  список директорий
+#     print("Root:",root)
+#     print("         Subdirs:", dirs)
+#     print("             files:", files)
+# print (os.walk('work',topdown=True))
+# for root, dirs, files in os.walk('work',topdown=False):
+# #     # Lkz rf;ljq lbhtrnjhbb djpdhfoftn rjnht; (root- Путь к директори,dirs-  список директорий
+#      print("Root:",root)
+#      print("         Subdirs:", dirs)
+#      print("             files:", files)
+
+# def print_tree(root,topdown):
+#      print(f'Обход {root}{ " Cверху вниз"if topdown else " Снизу вверх"}')
+#      for root, dirs, files in os.walk('work', topdown=topdown):
+#           print("Root:", root)
+#           print("         Subdirs:", dirs)
+#           print("             files:", files)
+#      print("=" * 50)
+#
+#
+# print_tree('work',topdown=False)
+# print_tree('work',topdown=True)
+# import time
+#
+# print(os.path.exists(r'C:\Users\Дмитрий\PycharmProjects\P1\work'))  # Определяет есть ли папка по такому путь
+# print(os.path.abspath(r'work'))  # Определяет абсолютный путь папки
+# print(os.path.getatime(r'work\w.text'))  # Определяет время последнего доступа к файлу в секундах
+# print(os.path.getctime(r'work\w.text'))  # Определяет время создания файла в секундах
+# print(os.path.getatime(r'work\w.text'))  # Определяет время последнего изменения файлу в милисекундах
+# print(os.path.getsize(r'work\w.text'))  # Определяет файла в байтах
+# size = round((os.path.getsize(r'work\w.text')) / 1024, 2)
+# print(size)
+# t = os.path.getctime(r'work\w.text')
+# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(t)))
+# print(os.path.isfile('work\w.text')) #существует ли файл
+# print(os.path.isdir('work')) #существует ли путь
